@@ -69,26 +69,38 @@ export default function HomePage() {
 
   return (
     <div className="bg-white text-neutral-900 selection:bg-[#d9ff3f] selection:text-black">
-      <section className="relative min-h-[100dvh] overflow-hidden bg-black">
-        <div className="pointer-events-none absolute inset-0 z-0 md:pointer-events-none">
-          {!prefersReduced && <GLSLHills width="100%" height="100%" speed={0.5} />}
-          {prefersReduced && <div className="absolute inset-0 bg-neutral-950" aria-hidden />}
+      <section className="relative min-h-[100dvh] overflow-hidden bg-white">
+        <div className="pointer-events-none absolute inset-0 z-0">
+          {!prefersReduced && (
+            <div className="absolute inset-0 opacity-[0.22] saturate-50 contrast-95 [mix-blend-mode:multiply]">
+              <GLSLHills width="100%" height="100%" speed={0.45} />
+            </div>
+          )}
+          {/* Capa dominante blanca para contraste alto; deja apenas textura */}
+          <div
+            className="absolute inset-0 bg-[linear-gradient(180deg,#ffffff_0%,#fafafa_45%,#ffffff_100%)]"
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-white/92 backdrop-blur-[2px]" aria-hidden />
+          {prefersReduced && <div className="absolute inset-0 bg-neutral-50" aria-hidden />}
         </div>
 
         <div className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-6 pb-14 pt-28 text-center md:px-10 md:pt-32 md:pb-20">
-          <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-white/55">
+          <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
             Kiosco Label · Creative Agency
           </p>
 
-          <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-            <span className="font-sans font-thin italic text-white/95">Marcas que se sienten</span>
+          <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-neutral-950 sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
+            <span className="font-sans font-thin italic text-neutral-600">
+              Marcas que se sienten
+            </span>
             <br />
             <span className="font-display text-4xl font-semibold uppercase sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
               reales y memorables.
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/60 md:text-lg">
+          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-neutral-600 md:text-lg">
             Branding, edición audiovisual y diseño integral para proyectos que quieren destacar sin perder identidad.
           </p>
 
@@ -96,14 +108,14 @@ export default function HomePage() {
             <Button
               variant="outline"
               asChild
-              className="h-11 rounded-none border-white/35 bg-white/10 px-8 text-xs font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-md hover:bg-white/20 hover:text-white"
+              className="h-11 rounded-none border-neutral-900/20 bg-white/70 px-8 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-900 shadow-sm backdrop-blur-sm hover:bg-neutral-950 hover:text-white"
             >
               <Link href="/work">Ver trabajo</Link>
             </Button>
             <Button
               variant="ghost"
               asChild
-              className="h-11 rounded-none border border-transparent px-6 text-xs font-semibold uppercase tracking-[0.16em] text-white/85 hover:bg-white/10 hover:text-white"
+              className="h-11 rounded-none border border-neutral-900/15 bg-transparent px-6 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-800 hover:bg-neutral-100 hover:text-neutral-950"
             >
               <Link href="/#contacto">Contactar</Link>
             </Button>
