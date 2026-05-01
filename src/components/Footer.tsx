@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Instagram, Linkedin, Globe } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -37,16 +37,12 @@ const Container = ({ children, className, delay = 0.2, reverse, simple }: Props)
 const navLinks = [
   { label: "Inicio", href: "/" },
   { label: "Sobre mí", href: "/about" },
-  { label: "Tienda", href: "/shop" },
   { label: "Portfolio", href: "/work" },
   { label: "Contacto", href: "/#contacto" },
 ];
 
 const socialLinks = [
-  { label: "Instagram", href: "https://instagram.com/gheranillos", icon: Instagram },
-  { label: "LinkedIn", href: "https://linkedin.com/in/gheranillos", icon: Linkedin },
-  { label: "X", href: "https://x.com/gheranillos", icon: "x-logo" as const },
-  { label: "Behance", href: "https://behance.net/gherard", icon: Globe },
+  { label: "Instagram", href: "https://instagram.com/kioscolabel", icon: Instagram },
 ];
 
 export default function Footer() {
@@ -57,7 +53,7 @@ export default function Footer() {
           <Container delay={0.1} className="h-auto">
             <Image
               src="/iconfooter.png"
-              alt="Gherard"
+              alt="Kiosco Label"
               width={35}
               height={40}
               className="h-[40px] w-[35px] object-contain"
@@ -93,20 +89,7 @@ export default function Footer() {
                     aria-label={item.label}
                     className="text-[#9a9a9a] transition-all duration-200 hover:scale-110 hover:text-white"
                   >
-                    {item.icon === "x-logo" ? (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.639 7.584H.474l8.601-9.83L0 1.154h7.594l5.243 6.932zM17.61 20.644h2.039L6.486 3.24H4.298z" />
-                      </svg>
-                    ) : (
-                      <item.icon size={20} />
-                    )}
+                    <item.icon size={20} />
                   </Link>
                 );
               })}
@@ -117,10 +100,10 @@ export default function Footer() {
         <Container delay={0.35} className="h-auto">
           <div className="mt-8 flex flex-col items-center justify-between gap-2 text-center md:flex-row md:gap-4 md:text-left">
             <p className="text-[0.8rem] text-[#aaaaaa]">
-              © 2025 Gherard. Todos los derechos reservados.
+              © {new Date().getFullYear()} Kiosco Label. Todos los derechos reservados.
             </p>
             <p className="text-[0.8rem] text-[#aaaaaa]">
-              Diseñado y desarrollado por Gherard
+              Diseñado y desarrollado por Kiosco Label
             </p>
           </div>
         </Container>

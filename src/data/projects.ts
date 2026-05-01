@@ -52,7 +52,7 @@ export const projects: Project[] = [
     description:
       "Diseño de marcas, sistemas visuales, piezas gráficas y conceptos que buscan verse sólidos, actuales y con personalidad.",
     longDescription:
-      "Me encargo de editar, filtrar y gestionar el contenido del canal de youtube. Buscando mostrar el MTB en Venezuela y Caracas.",
+      "Me encargo de editar, filtrar y gestionar el contenido del canal de YouTube con foco urbano y de montaña, mostrando el MTB en contexto real.",
     tags: ["Youtube", "Edicion", "Dirección"],
     coverImage: "/images/projects/covermtb.webp",
     images: [

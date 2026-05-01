@@ -54,13 +54,13 @@ export default function AboutPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/gherabout.jpg"
-                alt="Foto de Gherard"
+                alt="Equipo Kiosco Label"
                 className="h-full min-h-[360px] w-full object-cover md:min-h-[520px]"
                 onError={(e) => {
                   const img = e.currentTarget;
                   if (img.dataset.fallbackApplied === "1") return;
                   img.dataset.fallbackApplied = "1";
-                  img.src = "https://picsum.photos/seed/gherard-about/900/1200";
+                  img.src = "https://picsum.photos/seed/kiosco-about/900/1200";
                 }}
               />
             </div>
@@ -73,8 +73,7 @@ export default function AboutPage() {
                 Editor y director creativo.
               </h2>
               <p className="mt-6 max-w-[46ch] text-[0.98rem] leading-[1.85] text-white/68">
-                Trabajo desde Venezuela construyendo identidad visual, narrativa y
-                presencia digital para marcas con criterio. Me enfoco en crear
+                Construyo identidad visual, narrativa y presencia digital para marcas con criterio, con un enfoque remoto ágil sin perder cercanía. Me enfoco en crear
                 piezas que se sientan reales, con una direccion clara en cada
                 decision estetica.
               </p>

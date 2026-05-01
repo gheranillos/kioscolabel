@@ -96,7 +96,7 @@ export function ReviewsSection() {
             <div ref={cubeRef} className="cube relative will-change-transform">
               <div className="face face-front">
                 <p className="face-quote">
-                  "Gherard entendió desde el principio la vibra que quería para mi marca. El resultado fue
+                  "Kiosco Label entendió desde el principio la vibra que quería para mi marca. El resultado fue
                   exactamente lo que tenía en la cabeza pero mejor ejecutado."
                 </p>
                 <p className="face-author">

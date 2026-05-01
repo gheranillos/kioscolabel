@@ -45,7 +45,7 @@ export function CursorGlow() {
         height: 500,
         borderRadius: "50%",
         background:
-          "radial-gradient(circle, rgba(247,183,255,0.11) 0%, transparent 70%)",
+          "radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%)",
         pointerEvents: "none",
         zIndex: 9999,
         mixBlendMode: "screen",
