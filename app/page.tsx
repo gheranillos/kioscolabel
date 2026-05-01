@@ -76,14 +76,16 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-6 pb-14 pt-28 text-center md:px-10 md:pt-32 md:pb-20">
-          <p className="text-xs uppercase tracking-[0.28em] text-white/50">
+          <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-white/55">
             Kiosco Label · Creative Agency
           </p>
 
-          <h1 className="mt-8 max-w-4xl text-4xl font-black leading-[1.06] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-            <span className="font-thin italic text-white/95">Marcas que se sienten</span>
+          <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
+            <span className="font-sans font-thin italic text-white/95">Marcas que se sienten</span>
             <br />
-            <span className="font-black uppercase">reales y memorables.</span>
+            <span className="font-display text-4xl font-semibold uppercase sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
+              reales y memorables.
+            </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/60 md:text-lg">
@@ -120,11 +122,11 @@ export default function HomePage() {
               initial={prefersReduced ? false : "hidden"}
               whileInView={prefersReduced ? undefined : "visible"}
               viewport={{ once: true, margin: "-40px" }}
-              className="text-sm uppercase tracking-[0.25em] text-[#f7b7ff]"
+              className="font-display text-sm font-semibold uppercase tracking-[0.25em] text-[#f7b7ff]"
             >
               Servicios
             </motion.div>
-            <h2 className="mt-4 text-3xl font-black uppercase tracking-tight text-neutral-900 md:text-5xl">
+            <h2 className="font-display mt-4 text-3xl font-semibold uppercase tracking-tight text-neutral-900 md:text-5xl">
               {splitWords("Lo que hago.").map((word, index) => (
                 <span
                   key={`services-head-${word}-${index}`}
@@ -182,7 +184,7 @@ export default function HomePage() {
                       <span className="mr-4 align-super font-mono text-[0.75rem] font-bold text-fuchsia-600/90">
                         {`{${service.number}}`}
                       </span>
-                      <h3 className="text-[clamp(1.6rem,8vw,2.4rem)] font-normal leading-[0.95] tracking-[-0.03em] text-neutral-950 [font-family:var(--font-coolvetica-book),ui-sans-serif,system-ui,sans-serif] md:text-[clamp(2rem,3.5vw,3rem)]">
+                      <h3 className="font-mozaic text-[clamp(1.6rem,8vw,2.4rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-950 md:text-[clamp(2rem,3.5vw,3rem)]">
                         {service.title}
                       </h3>
                     </div>
@@ -240,7 +242,7 @@ export default function HomePage() {
       <section id="contacto" className="scroll-mt-16 border-t border-neutral-200 bg-neutral-950 text-white">
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
           <motion.div
-            className="text-xs uppercase tracking-[0.28em] text-[#f7b7ff]"
+            className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-[#f7b7ff]"
             variants={revealVariants.fadeIn}
             initial={prefersReduced ? false : "hidden"}
             whileInView={prefersReduced ? undefined : "visible"}
@@ -248,7 +250,7 @@ export default function HomePage() {
           >
             Contact
           </motion.div>
-          <h2 className="mt-5 max-w-5xl text-4xl font-black uppercase leading-[0.94] tracking-[-0.03em] md:text-7xl">
+          <h2 className="font-display mt-5 max-w-5xl text-4xl font-semibold uppercase leading-[0.94] tracking-[-0.03em] md:text-7xl">
             {splitWords("Ready para crear algo con identidad real?").map((word, index) => (
               <span
                 key={`contact-refresh-head-${word}-${index}`}
@@ -356,7 +358,7 @@ export default function HomePage() {
               </div>
               <button
                 type="button"
-                className="mt-7 inline-flex h-12 items-center justify-center rounded-full bg-[#f7b7ff] px-8 text-xs font-semibold uppercase tracking-[1.2px] text-black [font-family:CoolveticaBook] transition hover:translate-y-[-1px] hover:bg-white"
+                className="font-mozaic mt-7 inline-flex h-12 items-center justify-center rounded-full bg-[#f7b7ff] px-8 text-xs font-bold uppercase tracking-[1.2px] text-black transition hover:translate-y-[-1px] hover:bg-white"
               >
                 Enviar solicitud
               </button>

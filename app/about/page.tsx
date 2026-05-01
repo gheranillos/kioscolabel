@@ -20,7 +20,7 @@ export default function AboutPage() {
       <main className="bg-white">
         <section className="mx-auto w-full max-w-[1200px] px-[5vw] pb-16 pt-10 md:pb-24">
           <div className="pt-4 md:pt-8">
-            <h1 className="text-center text-[clamp(2.8rem,8vw,6.8rem)] font-black uppercase leading-[0.9] tracking-[-0.03em] text-[#0a0a0a]">
+            <h1 className="font-display text-center text-[clamp(2.8rem,8vw,6.8rem)] font-semibold uppercase leading-[0.9] tracking-[-0.03em] text-[#0a0a0a]">
               {splitWords("About me").map((word, index) => (
                 <span
                   key={`about-head-${word}-${index}`}
@@ -69,7 +69,7 @@ export default function AboutPage() {
               <p className="text-[0.65rem] uppercase tracking-[0.22em] text-[#d9ff3f]">
                 Sobre mi
               </p>
-              <h2 className="mt-4 text-[31px] font-black uppercase leading-[0.95] tracking-[2px] text-white [font-family:var(--font-coolvetica-book)]">
+              <h2 className="font-display mt-4 text-[31px] font-semibold uppercase leading-[0.95] tracking-[2px] text-white">
                 Editor y director creativo.
               </h2>
               <p className="mt-6 max-w-[46ch] text-[0.98rem] leading-[1.85] text-white/68">

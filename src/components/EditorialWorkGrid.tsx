@@ -24,7 +24,7 @@ function ProjectCard({ project }: { project: Project }) {
         />
       </div>
       <div className="mt-4 flex items-start justify-between gap-6">
-        <h3 className="text-base font-bold tracking-tight text-neutral-950 md:text-lg">
+        <h3 className="font-mozaic text-base font-semibold tracking-tight text-neutral-950 md:text-lg">
           {project.title}
         </h3>
         <div className="max-w-[40%] shrink-0 text-right text-[11px] font-normal leading-snug tracking-wide text-neutral-400 md:text-xs">
@@ -54,7 +54,7 @@ export function EditorialWorkGrid({
 
   return (
     <div className={className}>
-      <h2 className="mb-16 text-center text-4xl font-bold uppercase tracking-tight text-neutral-950 md:mb-20 md:text-5xl lg:text-6xl">
+      <h2 className="font-display mb-16 text-center text-4xl font-semibold uppercase tracking-tight text-neutral-950 md:mb-20 md:text-5xl lg:text-6xl">
         {heading}
       </h2>
       <div className="mx-auto grid max-w-[1480px] grid-cols-1 gap-x-14 gap-y-16 md:grid-cols-2 md:gap-x-20 lg:gap-x-28">

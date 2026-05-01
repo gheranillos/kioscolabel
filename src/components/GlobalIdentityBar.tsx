@@ -26,7 +26,7 @@ export default function GlobalIdentityBar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-normal text-neutral-900 transition-colors hover:text-neutral-600 ${
+                className={`font-display text-sm font-semibold tracking-wide text-neutral-900 transition-colors hover:text-neutral-600 ${
                   active ? "text-neutral-950" : ""
                 }`}
               >

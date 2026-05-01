@@ -7,6 +7,72 @@ import { CursorGlow } from '@/src/components/CursorGlow'
 import GlobalIdentityBar from '@/src/components/GlobalIdentityBar'
 import './globals.css'
 
+/** Cuerpo: legible variable (100–900 + itálica variable). */
+const urbanist = localFont({
+  src: [
+    {
+      path: '../fonts/kioscolabel/Urbanist-VariableFont_wght.ttf',
+      weight: '100 900',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/kioscolabel/Urbanist-Italic-VariableFont_wght.ttf',
+      weight: '100 900',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-urbanist',
+  display: 'swap',
+})
+
+/** Geométrica para UI y pesos destacados (familia Mozaic GEO). */
+const mozaicGeo = localFont({
+  src: [
+    {
+      path: '../fonts/kioscolabel/MozaicGEO-Regular-BF65792616e075e.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/kioscolabel/MozaicGEO-Medium-BF65792617daaee.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/kioscolabel/MozaicGEO-SemiBold-BF65792616e68bd.otf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/kioscolabel/MozaicGEO-Bold-BF65792617206a6.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/kioscolabel/MozaicGEO-ExtraBold-BF65792617d95f4.otf',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/kioscolabel/MozaicGEO-Black-BF65792617e757b.otf',
+      weight: '900',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-geometric',
+  display: 'swap',
+})
+
+/** Display / trial semibold para títulos tipo Work, WORKS, Servicios. */
+const malinton = localFont({
+  src: '../fonts/kioscolabel/MalintontrialversionSemibold-9My60.otf',
+  weight: '600',
+  style: 'normal',
+  variable: '--font-malinton',
+  display: 'swap',
+})
+
+/** Legado Coolvetica: solo variables para pantallas que aún las referencian. */
 const coolveticaBook = localFont({
   src: '../fonts/coolvetica/Coolvetica-Book-Regular.otf',
   weight: '400',
@@ -71,12 +137,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const fontVars = [
+    urbanist.variable,
+    mozaicGeo.variable,
+    malinton.variable,
+    coolvetica.variable,
+    coolveticaBook.variable,
+  ].join(' ')
+
   return (
-    <html
-      lang="es"
-      className={`${coolvetica.variable} ${coolveticaBook.variable}`}
-    >
-      <body className={`${coolvetica.className} font-sans antialiased`}>
+    <html lang="es" className={fontVars}>
+      <body className={`${urbanist.className} font-sans antialiased`}>
         <Providers>{children}</Providers>
         <GlobalIdentityBar />
         <CursorGlow />

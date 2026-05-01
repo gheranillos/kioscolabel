@@ -6,13 +6,13 @@ import ProjectImage from "@/src/components/ProjectImage";
 import { projects } from "@/src/data/projects";
 
 const PROJECT_TITLE_CLASS =
-  "max-w-[min(377px,100%)] text-[80px] font-black uppercase leading-[78px] tracking-[1.2px] text-white";
+  "font-mozaic max-w-[min(377px,100%)] text-[80px] font-black uppercase leading-[78px] tracking-[1.2px] text-white";
 const PROJECT_INTRO_CLASS =
   "mt-[30px] max-w-[620px] text-[1.02rem] leading-[23px] text-white/75";
 const PROJECT_CTA_CLASS =
-  "mt-6 inline-flex w-fit items-center rounded-full bg-[#f7b7ff] px-8 py-3.5 font-bold text-[#161616] transition-colors duration-200 hover:bg-[#161616] hover:text-[#f7b7ff]";
+  "font-mozaic mt-6 inline-flex w-fit items-center rounded-full bg-[#f7b7ff] px-8 py-3.5 font-bold text-[#161616] transition-colors duration-200 hover:bg-[#161616] hover:text-[#f7b7ff]";
 const PROJECT_INFO_LABEL_CLASS =
-  "text-[14px] font-thin leading-[1.3] text-white/80 [font-family:coolvetica]";
+  "font-mozaic text-[14px] font-light leading-[1.3] text-white/80";
 const PROJECT_INFO_VALUE_CLASS =
   "w-[111px] text-[15px] leading-[1.3] text-white";
 const PROJECT_SECTION_LABEL_CLASS =
@@ -23,7 +23,9 @@ const PROJECT_SUPPORTING_DESCRIPTION_CLASS =
   "mt-[27px] max-w-[620px] text-[0.98rem] leading-[19px] text-white/65";
 const PROJECT_MEDIA_LABEL_CLASS =
   "w-[531px] text-[13px] font-light uppercase tracking-[0.8px] leading-[26px] text-[#f7b7ff]";
-const PROJECT_LABEL_FONT_STYLE = { fontFamily: "coolveticaBook" } as const;
+const PROJECT_LABEL_FONT_STYLE = {
+  fontFamily: "var(--font-geometric), ui-sans-serif, sans-serif",
+} as const;
 
 function getYouTubeEmbedUrl(url: string) {
   try {
