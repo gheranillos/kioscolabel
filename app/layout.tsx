@@ -72,42 +72,6 @@ const malinton = localFont({
   display: 'swap',
 })
 
-/** Legado Coolvetica: solo variables para pantallas que aún las referencian. */
-const coolveticaBook = localFont({
-  src: '../fonts/coolvetica/Coolvetica-Book-Regular.otf',
-  weight: '400',
-  style: 'normal',
-  variable: '--font-coolvetica-book',
-  display: 'swap',
-})
-
-const coolvetica = localFont({
-  src: [
-    {
-      path: '../fonts/coolvetica/coolvetica-rg.otf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/coolvetica/coolvetica-rg-it.otf',
-      weight: '400',
-      style: 'italic',
-    },
-    {
-      path: '../fonts/coolvetica/coolvetica-condensed-rg.otf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/coolvetica/coolvetica-compressed-hv.otf',
-      weight: '900',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-coolvetica',
-  display: 'swap',
-})
-
 export const metadata: Metadata = {
   title: 'Kiosco Label - Creative Agency',
   description:
@@ -137,13 +101,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const fontVars = [
-    urbanist.variable,
-    mozaicGeo.variable,
-    malinton.variable,
-    coolvetica.variable,
-    coolveticaBook.variable,
-  ].join(' ')
+  const fontVars = [urbanist.variable, mozaicGeo.variable, malinton.variable].join(' ')
 
   return (
     <html lang="es" className={fontVars}>
