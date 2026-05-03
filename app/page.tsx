@@ -69,7 +69,7 @@ export default function HomePage() {
 
   return (
     <div className="bg-white text-neutral-900 selection:bg-[#d9ff3f] selection:text-black">
-      <section className="relative min-h-[100dvh] overflow-hidden bg-white">
+      <section className="relative min-h-[100dvh] overflow-hidden bg-[#f3f3f3]">
         <div className="pointer-events-none absolute inset-0 z-0">
           {!prefersReduced && (
             <div className="absolute inset-0 opacity-[0.22] saturate-50 contrast-95 [mix-blend-mode:multiply]">
@@ -87,11 +87,11 @@ export default function HomePage() {
 
         <div className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-6 pb-14 pt-28 text-center text-[#f3f3f3] md:px-10 md:pt-32 md:pb-20">
           <p className="font-sans text-xs font-semibold uppercase tracking-[2px] text-black">
-            Creative Agency
+            Creative Studio
           </p>
 
           <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-[#f3f3f3] sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-            <span className="font-sans align-bottom border border-black bg-white font-extrabold italic tracking-normal text-left text-black [background-clip:unset] [-webkit-background-clip:unset]">
+            <span className="font-sans align-bottom border border-black bg-white font-extrabold not-italic tracking-normal text-left text-black [background-clip:unset] [-webkit-background-clip:unset]">
               CREANDO MARCAS
             </span>
             <br />

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Instagram } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -40,10 +39,6 @@ const navLinks = [
   { label: "Contact", href: "/#contacto" },
 ];
 
-const socialLinks = [
-  { label: "Instagram", href: "https://instagram.com/kioscolabel", icon: Instagram },
-];
-
 export default function Footer() {
   return (
     <footer className="w-full border-t border-[#2b2b2b] bg-[#191919] px-6 py-16 md:px-[5vw] md:py-20">
@@ -74,27 +69,6 @@ export default function Footer() {
             </nav>
           </Container>
         </div>
-
-        <Container delay={0.25} className="h-auto">
-          <div className="mt-8 flex flex-col items-center justify-center gap-6 border-y border-[#2a2a2a] py-12 text-center md:mt-10 md:flex-row md:justify-end md:text-left">
-            <div className="flex items-center gap-6">
-              {socialLinks.map((item) => {
-                return (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={item.label}
-                    className="text-[#9a9a9a] transition-all duration-200 hover:scale-110 hover:text-white"
-                  >
-                    <item.icon size={20} />
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </Container>
 
         <Container delay={0.35} className="h-auto">
           <div className="mt-8 flex flex-col items-center justify-between gap-2 text-center md:flex-row md:gap-4 md:text-left">
