@@ -23,7 +23,7 @@ const services = [
     number: "01",
     title: "Branding",
     description:
-      "Desarrollo de identidad visual completa: naming, paleta, tipografía, logotipo y sistema gráfico. Marcas que se ven sólidas, actuales y con personalidad propia.",
+      "No te hago un logo. Te hago una marca que la gente recuerde. Defino estrategia, tono, identidad visual y narrativa para que tu negocio se vea como lo que vale.",
     tags: ["Identidad", "Logotipo", "Sistema Visual", "Estrategia"],
     image: "/picbranding.png",
     fallback: "https://picsum.photos/seed/branding/800/520",
@@ -32,7 +32,7 @@ const services = [
     number: "02",
     title: "Edición de Video",
     description:
-      "Piezas para redes, campañas y contenido audiovisual. Edición con criterio narrativo, ritmo y estética cuidada para que cada video comunique algo real.",
+      "El video no es relleno. Es percepcion. Edito piezas con ritmo, criterio y direccion para que tu marca se sienta viva y coherente en cada pantalla.",
     tags: ["Redes", "Narrativa", "Ritmo", "Contenido"],
     image: "/picvideos.png",
     fallback: "https://picsum.photos/seed/videoediting/800/520",
@@ -41,7 +41,7 @@ const services = [
     number: "03",
     title: "Diseño Web",
     description:
-      "Sitios y portfolios con diseño limpio, buena estructura y atención al detalle. Enfocado en que la experiencia visual refleje la identidad de la marca.",
+      "Diseno sitios que se ven duros y funcionan en serio. Cada bloque responde a una estrategia clara: posicionar tu marca, ordenar tu mensaje y convertir visitas en interes real.",
     tags: ["Responsive", "UI", "Portfolio", "Webflow"],
     image: "/picweb.png",
     fallback: "https://picsum.photos/seed/webdesign/800/520",
@@ -50,7 +50,7 @@ const services = [
     number: "04",
     title: "Diseño Gráfico",
     description:
-      "Piezas gráficas para redes, print y campañas. Flyers, presentaciones, contenido visual y todo lo que necesite verse bien y tener coherencia.",
+      "Bajo tu marca a piezas concretas: contenido, presentaciones y campañas visuales con caracter. Cultura + calle + estrategia + estetica. Sin las cuatro, es solo decoracion.",
     tags: ["Gráfica", "Print", "Redes", "Campaña"],
     image: "/picdesign.png",
     fallback: "https://picsum.photos/seed/graphic/800/520",
@@ -87,21 +87,21 @@ export default function HomePage() {
 
         <div className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-6 pb-14 pt-28 text-center text-[#f3f3f3] md:px-10 md:pt-32 md:pb-20">
           <p className="font-sans text-xs font-semibold uppercase tracking-[2px] text-black">
-            Creative Studio
+            Kiosco Label - Lecheria, Venezuela
           </p>
 
           <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-[#f3f3f3] sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
             <span className="font-sans align-bottom bg-white font-extrabold not-italic tracking-normal text-left text-black [background-clip:unset] [-webkit-background-clip:unset]">
-              CREANDO MARCAS
+              DISENO QUE VENDE
             </span>
             <br />
             <span className="font-sans text-4xl font-thin uppercase tracking-[0.2px] text-black sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-              REALES Y MEMORABLES
+              PORQUE PIENSO ANTES DE DECORAR
             </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-black md:text-lg">
-            Kiosco label desarrolla Branding, edición audiovisual y conceptos para proyectos que quieren destacar sin perder identidad.
+            El logo es el 5%. El otro 95% es estrategia, estetica y narrativa. Si tu imagen no refleja tu valor, yo la reconstruyo completa.
           </p>
 
           <div className="pointer-events-auto mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -263,7 +263,7 @@ export default function HomePage() {
             Contact
           </motion.div>
           <h2 className="font-display mt-5 max-w-5xl text-4xl font-semibold uppercase leading-[0.94] tracking-[-0.03em] md:text-7xl">
-            {splitWords("Ready para crear algo con identidad real?").map((word, index) => (
+            {splitWords("Si tu marca no se siente real, la rehago desde cero.").map((word, index) => (
               <span
                 key={`contact-refresh-head-${word}-${index}`}
                 style={{ display: "inline-block", overflow: "hidden" }}
@@ -332,14 +332,14 @@ export default function HomePage() {
 
             <motion.form variants={staggerChild} className="rounded-[30px] border border-white/15 bg-white/[0.03] p-7 md:p-9">
               <p className="text-sm uppercase tracking-[0.2em] text-white/60">
-                Cuentame sobre tu idea
+                Tienes talento, pero no identidad?
               </p>
               <div className="mt-7 grid gap-5">
                 <label className="grid gap-2 text-xs uppercase tracking-[0.2em] text-white/45">
                   Nombre
                   <input
                     type="text"
-                    placeholder="Tu nombre"
+                    placeholder="Como te llamas?"
                     className="h-12 rounded-xl border border-white/15 bg-black/20 px-4 text-sm tracking-wide text-white placeholder:text-white/35 outline-none transition focus:border-[#d9ff3f]"
                   />
                 </label>
@@ -347,7 +347,7 @@ export default function HomePage() {
                   Email
                   <input
                     type="email"
-                    placeholder="correo@ejemplo.com"
+                    placeholder="Donde te escribo?"
                     className="h-12 rounded-xl border border-white/15 bg-black/20 px-4 text-sm tracking-wide text-white placeholder:text-white/35 outline-none transition focus:border-[#d9ff3f]"
                   />
                 </label>
@@ -355,7 +355,7 @@ export default function HomePage() {
                   Tipo de proyecto
                   <input
                     type="text"
-                    placeholder="Branding, web, video..."
+                    placeholder="Branding, web o video?"
                     className="h-12 rounded-xl border border-white/15 bg-black/20 px-4 text-sm tracking-wide text-white placeholder:text-white/35 outline-none transition focus:border-[#d9ff3f]"
                   />
                 </label>
@@ -363,7 +363,7 @@ export default function HomePage() {
                   Mensaje
                   <textarea
                     rows={5}
-                    placeholder="Describe tu proyecto, objetivos y tiempos..."
+                    placeholder="Que vendes, a quien le hablas y que te esta frenando?"
                     className="min-h-[136px] rounded-xl border border-white/15 bg-black/20 px-4 py-3 text-sm leading-relaxed tracking-wide text-white placeholder:text-white/35 outline-none transition focus:border-[#d9ff3f]"
                   />
                 </label>
@@ -372,7 +372,7 @@ export default function HomePage() {
                 type="button"
                 className="font-mozaic mt-7 inline-flex h-12 items-center justify-center rounded-full bg-[#f7b7ff] px-8 text-xs font-bold uppercase tracking-[1.2px] text-black transition hover:translate-y-[-1px] hover:bg-white"
               >
-                Enviar solicitud
+                Quiero construir mi marca
               </button>
             </motion.form>
           </motion.div>

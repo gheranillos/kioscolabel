@@ -6,28 +6,28 @@ import Footer from "@/components/Footer";
 import { splitWords, wordVariants } from "@/src/hooks/useTextReveal";
 
 const stats = [
-  { value: "5+", label: "Anos de experiencia" },
-  { value: "120+", label: "Proyectos creativos" },
-  { value: "30+", label: "Marcas acompanadas" },
+  { value: "5+", label: "Anos construyendo marcas" },
+  { value: "120+", label: "Proyectos creativos ejecutados" },
+  { value: "30+", label: "Identidades elevadas" },
 ];
 
 const testimonials = [
   {
-    title: "Vision y claridad",
+    title: "Direccion real",
     quote:
-      "Kiosco Label tradujo una idea confusa en una identidad visual solida y lista para crecer.",
+      "Tenia talento, pero mi marca se veia perdida. Ahora todo comunica el mismo nivel.",
     name: "Fundadora, marca de skincare",
   },
   {
-    title: "Proceso ordenado",
+    title: "Estrategia con forma",
     quote:
-      "Cada entrega tuvo intencion. Desde estrategia hasta diseno final, todo estuvo bien guiado.",
+      "No fue solo diseno bonito. Hubo estructura, narrativa y decisiones claras desde el inicio.",
     name: "Director, estudio audiovisual",
   },
   {
-    title: "Resultado memorable",
+    title: "Presencia que pesa",
     quote:
-      "No solo mejoro nuestra estetica: ahora comunicamos mejor y con mucha mas consistencia.",
+      "La marca dejo de verse amateur. Ahora tiene identidad y se siente premium en todo.",
     name: "Co-founder, e-commerce de moda",
   },
 ];
@@ -68,7 +68,7 @@ export default function AboutPage() {
               About
             </p>
             <h1 className="font-display mt-5 text-[clamp(2.8rem,8vw,6.6rem)] font-semibold uppercase leading-[0.9] tracking-[-0.03em] text-[#0a0a0a]">
-              {splitWords("About studio").map((word, index) => (
+              {splitWords("Sobre Kiosco Label").map((word, index) => (
                 <span
                   key={`about-head-${word}-${index}`}
                   style={{ display: "inline-block", overflow: "hidden" }}
@@ -90,9 +90,9 @@ export default function AboutPage() {
               ))}
             </h1>
             <p className="mt-7 max-w-3xl text-[1rem] leading-[1.85] text-neutral-700 md:text-[1.08rem]">
-              Somos un studio creativo que une estrategia, diseno y produccion
-              para construir marcas con identidad real. Convertimos ideas en
-              sistemas visuales claros, utiles y memorables.
+              No soy una agencia. No soy un freelance suelto. Construyo marcas
+              completas para negocios y artistas que valen mas de lo que su
+              imagen esta diciendo hoy.
             </p>
           </div>
 
@@ -113,18 +113,16 @@ export default function AboutPage() {
             </div>
             <div className="py-8 md:col-span-8 md:px-10 md:py-10">
               <h2 className="font-display text-[clamp(1.7rem,4vw,3.1rem)] font-semibold uppercase leading-[0.95] tracking-[-0.02em] text-black">
-                De concepto a experiencia.
+                De idea suelta a identidad con presencia.
               </h2>
               <p className="mt-6 max-w-[56ch] text-[1rem] leading-[1.85] text-neutral-700">
-                Trabajamos con marcas que necesitan una identidad mas clara,
-                coherente y lista para competir. Nuestro enfoque mezcla sistema
-                visual, narrativa y decisiones practicas para que cada punto de
-                contacto se sienta conectado.
+                Trabajo con marcas locales y emergentes cuya imagen no refleja
+                su valor real. Ordeno estrategia, discurso y sistema visual para
+                que todo hable el mismo idioma.
               </p>
               <p className="mt-5 max-w-[56ch] text-[1rem] leading-[1.85] text-neutral-700">
-                Desarrollamos branding, contenido audiovisual y diseno web con
-                mirada editorial: menos ruido, mas criterio y una identidad que
-                se sostiene en el tiempo.
+                El logo es el 5%. El otro 95% es estrategia, estetica y
+                narrativa. Si falta eso, no hay marca: solo decoracion.
               </p>
             </div>
           </motion.div>
@@ -146,12 +144,12 @@ export default function AboutPage() {
             </div>
             <div className="py-8 md:col-span-8 md:px-10 md:py-10">
               <h3 className="font-display max-w-4xl text-[clamp(1.8rem,4vw,3.3rem)] font-semibold uppercase leading-[0.95] tracking-[-0.02em] text-neutral-900">
-                Construir marcas que conecten con personas reales.
+                Disenar marcas que la gente recuerde.
               </h3>
               <p className="mt-6 max-w-3xl text-[1rem] leading-[1.85] text-neutral-700 md:text-[1.06rem]">
-                La creatividad y la tecnologia no van separadas. Cada proyecto
-                parte de una idea fuerte, se estructura con estrategia y se
-                aterriza en piezas visuales que funcionan en el mundo real.
+                Mi enfoque mezcla cultura, calle, estrategia y estetica.
+                Diseno para vender mejor, verse mejor y posicionarte mejor.
+                Cada decision visual tiene una razon de negocio.
               </p>
             </div>
           </motion.section>
@@ -229,11 +227,11 @@ export default function AboutPage() {
               Let&apos;s build something meaningful
             </p>
             <h3 className="font-display mt-4 max-w-4xl text-[clamp(2rem,5vw,4.4rem)] font-semibold uppercase leading-[0.95] tracking-[-0.02em] text-black">
-              Tu proyecto merece una identidad fuerte.
+              Tienes talento. Falta identidad.
             </h3>
             <p className="mt-5 max-w-2xl text-[0.98rem] leading-[1.85] text-neutral-700">
-              Si quieres construir una marca clara, consistente y memorable,
-              podemos trabajar juntos desde estrategia hasta ejecucion.
+              Si quieres una marca con presencia real, yo te ayudo a construirla
+              desde estrategia hasta ejecucion visual.
             </p>
           </motion.section>
         </section>
