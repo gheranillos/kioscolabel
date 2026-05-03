@@ -86,22 +86,22 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-6 pb-14 pt-28 text-center text-[#f3f3f3] md:px-10 md:pt-32 md:pb-20">
-          <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-[#f3f3f3]">
-            Kiosco Label · Creative Agency
+          <p className="font-sans text-xs font-semibold uppercase tracking-[2px] text-black">
+            Creative Agency
           </p>
 
           <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-[#f3f3f3] sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-            <span className="font-sans font-thin italic text-[#f3f3f3]">
-              Marcas que se sienten
+            <span className="font-sans align-bottom border border-black bg-white font-extrabold italic tracking-normal text-left text-black [background-clip:unset] [-webkit-background-clip:unset]">
+              CREANDO MARCAS
             </span>
             <br />
-            <span className="font-display text-4xl font-semibold uppercase sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-              reales y memorables.
+            <span className="font-sans text-4xl font-thin uppercase tracking-[0.2px] text-black sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
+              REALES Y MEMORABLES
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-[#f3f3f3] md:text-lg">
-            Branding, edición audiovisual y diseño integral para proyectos que quieren destacar sin perder identidad.
+          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-black md:text-lg">
+            Kiosco label desarrolla Branding, edición audiovisual y conceptos para proyectos que quieren destacar sin perder identidad.
           </p>
 
           <div className="pointer-events-auto mt-10 flex flex-wrap items-center justify-center gap-4">
