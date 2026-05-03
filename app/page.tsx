@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import { EditorialWorkGrid } from "@/src/components/EditorialWorkGrid";
 import { ReviewsSection } from "@/src/sections/Reviews";
+import { ServicesAccordion } from "@/src/sections/ServicesAccordion";
+import { ClientsSection } from "@/src/sections/Clients";
 import { splitWords, wordVariants } from "@/src/hooks/useTextReveal";
 import { revealVariants, staggerChild, staggerContainer } from "@/src/hooks/useScrollReveal";
 
@@ -17,45 +19,6 @@ const GLSLHills = dynamic(
   () => import("@/components/ui/glsl-hills").then((m) => m.GLSLHills),
   { ssr: false, loading: () => null },
 );
-
-const services = [
-  {
-    number: "01",
-    title: "Branding",
-    description:
-      "No te hacemos un logo. Te hacemos una marca que la gente recuerde. Definimos estrategia, tono, identidad visual y narrativa para que tu negocio se vea como lo que vale.",
-    tags: ["Identidad", "Logotipo", "Sistema Visual", "Estrategia"],
-    image: "/picbranding.png",
-    fallback: "https://picsum.photos/seed/branding/800/520",
-  },
-  {
-    number: "02",
-    title: "Edición de Video",
-    description:
-      "El video no es relleno. Es percepcion. Editamos piezas con ritmo, criterio y direccion para que tu marca se sienta viva y coherente en cada pantalla.",
-    tags: ["Redes", "Narrativa", "Ritmo", "Contenido"],
-    image: "/picvideos.png",
-    fallback: "https://picsum.photos/seed/videoediting/800/520",
-  },
-  {
-    number: "03",
-    title: "Diseño Web",
-    description:
-      "Disenamos sitios que se ven duros y funcionan en serio. Cada bloque responde a una estrategia clara: posicionar tu marca, ordenar tu mensaje y convertir visitas en interes real.",
-    tags: ["Responsive", "UI", "Portfolio", "Webflow"],
-    image: "/picweb.png",
-    fallback: "https://picsum.photos/seed/webdesign/800/520",
-  },
-  {
-    number: "04",
-    title: "Diseño Gráfico",
-    description:
-      "Bajamos tu marca a piezas concretas: contenido, presentaciones y campañas visuales con caracter. Cultura + calle + estrategia + estetica. Sin las cuatro, es solo decoracion.",
-    tags: ["Gráfica", "Print", "Redes", "Campaña"],
-    image: "/picdesign.png",
-    fallback: "https://picsum.photos/seed/graphic/800/520",
-  },
-];
 
 export default function HomePage() {
   const [prefersReduced, setPrefersReduced] = useState(false);
@@ -91,7 +54,7 @@ export default function HomePage() {
           </p>
 
           <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-[#f3f3f3] sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-            <span className="font-sans text-4xl font-thin uppercase tracking-[0.2px] text-black sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
+            <span className="font-sans text-4xl font-extrabold uppercase tracking-[0.2px] text-black sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
               BECAUSE WE THINK
               <br />
               BEFORE WE DESIGN
@@ -128,124 +91,9 @@ export default function HomePage() {
         <EditorialWorkGrid heading="WORKS" />
       </section>
 
-      <section
-        id="servicios"
-        className="scroll-mt-16 border-y border-neutral-200 bg-neutral-100/90"
-      >
-        <div className="mx-auto max-w-7xl overflow-visible px-6 pb-0 pt-24 md:px-10">
-          <div className="max-w-2xl">
-            <motion.div
-              variants={revealVariants.fadeIn}
-              initial={prefersReduced ? false : "hidden"}
-              whileInView={prefersReduced ? undefined : "visible"}
-              viewport={{ once: true, margin: "-40px" }}
-              className="font-display text-sm font-semibold uppercase tracking-[0.25em] text-[#f7b7ff]"
-            >
-              Servicios
-            </motion.div>
-            <h2 className="font-display mt-4 text-3xl font-semibold uppercase tracking-tight text-neutral-900 md:text-5xl">
-              {splitWords("Lo que hacemos.").map((word, index) => (
-                <span
-                  key={`services-head-${word}-${index}`}
-                  style={{ display: "inline-block", overflow: "hidden" }}
-                >
-                  <motion.span
-                    style={{ display: "inline-block", marginRight: "0.25em" }}
-                    variants={wordVariants}
-                    custom={index}
-                    initial={prefersReduced ? false : "hidden"}
-                    whileInView={prefersReduced ? undefined : "visible"}
-                    viewport={{ once: true, margin: "-40px" }}
-                  >
-                    {word}
-                  </motion.span>
-                </span>
-              ))}
-            </h2>
-          </div>
+      <ServicesAccordion />
 
-          <motion.div
-            className="mt-10 flex flex-col gap-0 overflow-visible pb-14"
-            variants={staggerContainer}
-            initial={prefersReduced ? false : "hidden"}
-            whileInView={prefersReduced ? undefined : "visible"}
-            viewport={{ once: true, margin: "-40px" }}
-          >
-            {services.map((service, index) => (
-              <motion.article
-                key={service.title}
-                className={`group sticky min-h-[420px] w-full rounded-2xl border border-neutral-300/90 bg-white px-6 py-8 shadow-[0_4px_28px_rgba(0,0,0,0.1)] ring-1 ring-black/[0.06] transition-[transform,box-shadow] duration-300 ease-out hover:shadow-[0_12px_40px_rgba(0,0,0,0.14)] md:px-14 md:py-12 ${
-                  index === 0
-                    ? "top-[60px] md:top-[96px]"
-                    : index === 1
-                      ? "top-[72px] md:top-[114px]"
-                      : index === 2
-                        ? "top-[84px] md:top-[132px]"
-                        : "top-[96px] md:top-[150px]"
-                }`}
-                style={{ zIndex: index + 1 }}
-                variants={staggerChild}
-                whileHover={
-                  prefersReduced
-                    ? undefined
-                    : {
-                        y: -8,
-                        scale: 1.015,
-                        transition: { duration: 0.25, ease: "easeOut" },
-                      }
-                }
-              >
-                <div className="grid gap-8 md:grid-cols-[1fr_380px] md:gap-10">
-                  <div className="min-w-0">
-                    <div className="flex items-baseline">
-                      <span className="mr-4 align-super font-mono text-[0.75rem] font-bold text-fuchsia-600/90">
-                        {`{${service.number}}`}
-                      </span>
-                      <h3 className="font-mozaic text-[clamp(1.6rem,8vw,2.4rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-neutral-950 md:text-[clamp(2rem,3.5vw,3rem)]">
-                        {service.title}
-                      </h3>
-                    </div>
-                    <p className="mt-5 max-w-[520px] text-base leading-[1.75] text-neutral-800">
-                      {service.description}
-                    </p>
-                    <div className="mt-6 flex flex-wrap gap-2">
-                      {service.tags.map((tag) => (
-                        <span
-                          key={`${service.title}-${tag}`}
-                          className="rounded-full border border-neutral-200/80 bg-neutral-200/60 px-3.5 py-1 text-[0.78rem] font-medium text-neutral-900"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="hidden md:block">
-                    <motion.div
-                      className="relative h-[260px] overflow-hidden rounded-xl"
-                      whileHover={
-                        prefersReduced ? undefined : { scale: 1.06, transition: { duration: 0.5 } }
-                      }
-                    >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="h-full w-full object-cover transition-transform duration-400 ease-out group-hover:scale-[1.03]"
-                        onError={(e) => {
-                          const img = e.currentTarget;
-                          if (img.dataset.fallbackApplied === "1") return;
-                          img.dataset.fallbackApplied = "1";
-                          img.src = service.fallback;
-                        }}
-                      />
-                    </motion.div>
-                  </div>
-                </div>
-              </motion.article>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <ClientsSection />
 
       <ReviewsSection />
 
