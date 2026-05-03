@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const clamp = (v: number, min: number, max: number) => Math.min(Math.max(v, min), max);
@@ -90,16 +88,6 @@ export function ReviewsSection() {
 
         <div className="relative z-10 flex w-full max-w-6xl items-center justify-center px-6 md:px-10">
           <div className="review-split">
-            <div className="review-logo-wrap">
-              <Image
-                src="/Isotipoblanco2.webp"
-                alt="Kiosco Label"
-                width={260}
-                height={300}
-                className="review-logo"
-                priority={false}
-              />
-            </div>
             <div className="cube-shell relative flex items-center justify-center [perspective:1200px] [perspective-origin:center_center]">
               <div
                 ref={posRef}
@@ -179,18 +167,6 @@ export function ReviewsSection() {
           align-items: center;
           gap: 2rem;
           grid-template-columns: 1fr;
-        }
-
-        .review-logo-wrap {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .review-logo {
-          width: clamp(120px, 16vw, 200px);
-          height: auto;
-          object-fit: contain;
         }
 
         .cube {
@@ -286,12 +262,8 @@ export function ReviewsSection() {
 
         @media (min-width: 768px) {
           .review-split {
-            grid-template-columns: minmax(180px, 0.7fr) 1fr;
-            gap: 3rem;
-          }
-
-          .review-logo-wrap {
-            justify-content: flex-start;
+            grid-template-columns: 1fr;
+            gap: 0;
           }
         }
       `}</style>
