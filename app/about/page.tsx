@@ -90,7 +90,7 @@ export default function AboutPage() {
               ))}
             </h1>
             <p className="mt-7 max-w-3xl text-[1rem] leading-[1.85] text-neutral-700 md:text-[1.08rem]">
-              No soy una agencia. No soy un freelance suelto. Construyo marcas
+              No somos una agencia generica. Somos un estudio creativo que construye marcas
               completas para negocios y artistas que valen mas de lo que su
               imagen esta diciendo hoy.
             </p>
@@ -116,8 +116,8 @@ export default function AboutPage() {
                 De idea suelta a identidad con presencia.
               </h2>
               <p className="mt-6 max-w-[56ch] text-[1rem] leading-[1.85] text-neutral-700">
-                Trabajo con marcas locales y emergentes cuya imagen no refleja
-                su valor real. Ordeno estrategia, discurso y sistema visual para
+                Trabajamos con marcas locales y emergentes cuya imagen no refleja
+                su valor real. Ordenamos estrategia, discurso y sistema visual para
                 que todo hable el mismo idioma.
               </p>
               <p className="mt-5 max-w-[56ch] text-[1rem] leading-[1.85] text-neutral-700">
@@ -147,8 +147,8 @@ export default function AboutPage() {
                 Disenar marcas que la gente recuerde.
               </h3>
               <p className="mt-6 max-w-3xl text-[1rem] leading-[1.85] text-neutral-700 md:text-[1.06rem]">
-                Mi enfoque mezcla cultura, calle, estrategia y estetica.
-                Diseno para vender mejor, verse mejor y posicionarte mejor.
+                Nuestro enfoque mezcla cultura, calle, estrategia y estetica.
+                Disenamos para vender mejor, verse mejor y posicionarte mejor.
                 Cada decision visual tiene una razon de negocio.
               </p>
             </div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
               Tienes talento. Falta identidad.
             </h3>
             <p className="mt-5 max-w-2xl text-[0.98rem] leading-[1.85] text-neutral-700">
-              Si quieres una marca con presencia real, yo te ayudo a construirla
+              Si quieres una marca con presencia real, te ayudamos a construirla
               desde estrategia hasta ejecucion visual.
             </p>
           </motion.section>

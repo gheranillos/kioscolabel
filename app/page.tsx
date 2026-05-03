@@ -96,12 +96,12 @@ export default function HomePage() {
             </span>
             <br />
             <span className="font-sans text-4xl font-thin uppercase tracking-[0.2px] text-black sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-              PORQUE PIENSO ANTES DE DECORAR
+              BECAUSE WE THINK BEFORE WE DESIGN
             </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-black md:text-lg">
-            El logo es el 5%. El otro 95% es estrategia, estetica y narrativa. Si tu imagen no refleja tu valor, yo la reconstruyo completa.
+            El logo es el 5%. El otro 95% es estrategia, estetica y narrativa. Si tu imagen no refleja tu valor, la reconstruimos completa.
           </p>
 
           <div className="pointer-events-auto mt-10 flex flex-wrap items-center justify-center gap-4">
