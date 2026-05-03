@@ -15,7 +15,7 @@ export default function GlobalIdentityBar() {
 
   return (
     <header className="pointer-events-none fixed left-0 right-0 top-0 z-40 border-b border-neutral-200 bg-neutral-50/95 px-6 backdrop-blur-sm md:px-10">
-      <div className="pointer-events-auto mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between">
+      <div className="pointer-events-auto mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between text-[#f3f3f3]">
         <nav className="flex items-center gap-8 md:gap-11">
           {links.map((link) => {
             const active =
@@ -26,7 +26,7 @@ export default function GlobalIdentityBar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-display text-sm font-semibold tracking-wide text-neutral-900 transition-colors hover:text-neutral-600 ${
+                className={`font-mozaic text-sm font-extralight tracking-normal text-neutral-900 transition-colors hover:text-neutral-600 ${
                   active ? "text-neutral-950" : ""
                 }`}
               >
@@ -41,7 +41,7 @@ export default function GlobalIdentityBar() {
             alt=""
             width={35}
             height={40}
-            className="h-9 w-8 object-contain"
+            className="h-9 w-[127px] object-contain"
             priority
           />
         </Link>

@@ -85,13 +85,13 @@ export default function HomePage() {
           {prefersReduced && <div className="absolute inset-0 bg-neutral-50" aria-hidden />}
         </div>
 
-        <div className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-6 pb-14 pt-28 text-center md:px-10 md:pt-32 md:pb-20">
-          <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+        <div className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-6 pb-14 pt-28 text-center text-[#f3f3f3] md:px-10 md:pt-32 md:pb-20">
+          <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-[#f3f3f3]">
             Kiosco Label · Creative Agency
           </p>
 
-          <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-neutral-950 sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-            <span className="font-sans font-thin italic text-neutral-600">
+          <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-[#f3f3f3] sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
+            <span className="font-sans font-thin italic text-[#f3f3f3]">
               Marcas que se sienten
             </span>
             <br />
@@ -100,7 +100,7 @@ export default function HomePage() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-neutral-600 md:text-lg">
+          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-[#f3f3f3] md:text-lg">
             Branding, edición audiovisual y diseño integral para proyectos que quieren destacar sin perder identidad.
           </p>
 
@@ -125,7 +125,7 @@ export default function HomePage() {
 
       <section
         id="proyectos"
-        className="scroll-mt-16 border-t border-neutral-200 bg-[#efefee] px-6 py-20 md:px-10 md:py-28"
+        className="scroll-mt-16 border-t border-neutral-200 bg-[#efefee] px-6 py-20 text-[#f3f3f3] md:px-10 md:py-28"
       >
         <EditorialWorkGrid heading="WORKS" />
       </section>
