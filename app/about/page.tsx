@@ -15,7 +15,7 @@ const testimonials = [
   {
     title: "Direccion real",
     quote:
-      "Tenia talento, pero mi marca se veia perdida. Ahora todo comunica el mismo nivel.",
+      "Teniamos talento, pero nuestra marca se veia perdida. Ahora todo comunica el mismo nivel.",
     name: "Fundadora, marca de skincare",
   },
   {

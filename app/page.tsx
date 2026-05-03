@@ -23,7 +23,7 @@ const services = [
     number: "01",
     title: "Branding",
     description:
-      "No te hago un logo. Te hago una marca que la gente recuerde. Defino estrategia, tono, identidad visual y narrativa para que tu negocio se vea como lo que vale.",
+      "No te hacemos un logo. Te hacemos una marca que la gente recuerde. Definimos estrategia, tono, identidad visual y narrativa para que tu negocio se vea como lo que vale.",
     tags: ["Identidad", "Logotipo", "Sistema Visual", "Estrategia"],
     image: "/picbranding.png",
     fallback: "https://picsum.photos/seed/branding/800/520",
@@ -32,7 +32,7 @@ const services = [
     number: "02",
     title: "Edición de Video",
     description:
-      "El video no es relleno. Es percepcion. Edito piezas con ritmo, criterio y direccion para que tu marca se sienta viva y coherente en cada pantalla.",
+      "El video no es relleno. Es percepcion. Editamos piezas con ritmo, criterio y direccion para que tu marca se sienta viva y coherente en cada pantalla.",
     tags: ["Redes", "Narrativa", "Ritmo", "Contenido"],
     image: "/picvideos.png",
     fallback: "https://picsum.photos/seed/videoediting/800/520",
@@ -41,7 +41,7 @@ const services = [
     number: "03",
     title: "Diseño Web",
     description:
-      "Diseno sitios que se ven duros y funcionan en serio. Cada bloque responde a una estrategia clara: posicionar tu marca, ordenar tu mensaje y convertir visitas en interes real.",
+      "Disenamos sitios que se ven duros y funcionan en serio. Cada bloque responde a una estrategia clara: posicionar tu marca, ordenar tu mensaje y convertir visitas en interes real.",
     tags: ["Responsive", "UI", "Portfolio", "Webflow"],
     image: "/picweb.png",
     fallback: "https://picsum.photos/seed/webdesign/800/520",
@@ -50,7 +50,7 @@ const services = [
     number: "04",
     title: "Diseño Gráfico",
     description:
-      "Bajo tu marca a piezas concretas: contenido, presentaciones y campañas visuales con caracter. Cultura + calle + estrategia + estetica. Sin las cuatro, es solo decoracion.",
+      "Bajamos tu marca a piezas concretas: contenido, presentaciones y campañas visuales con caracter. Cultura + calle + estrategia + estetica. Sin las cuatro, es solo decoracion.",
     tags: ["Gráfica", "Print", "Redes", "Campaña"],
     image: "/picdesign.png",
     fallback: "https://picsum.photos/seed/graphic/800/520",
@@ -91,12 +91,10 @@ export default function HomePage() {
           </p>
 
           <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-[#f3f3f3] sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-            <span className="font-sans align-bottom bg-white font-extrabold not-italic tracking-normal text-left text-black [background-clip:unset] [-webkit-background-clip:unset]">
-              DISENO QUE VENDE
-            </span>
-            <br />
             <span className="font-sans text-4xl font-thin uppercase tracking-[0.2px] text-black sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-              BECAUSE WE THINK BEFORE WE DESIGN
+              BECAUSE WE THINK
+              <br />
+              BEFORE WE DESIGN
             </span>
           </h1>
 
@@ -146,7 +144,7 @@ export default function HomePage() {
               Servicios
             </motion.div>
             <h2 className="font-display mt-4 text-3xl font-semibold uppercase tracking-tight text-neutral-900 md:text-5xl">
-              {splitWords("Lo que hago.").map((word, index) => (
+              {splitWords("Lo que hacemos.").map((word, index) => (
                 <span
                   key={`services-head-${word}-${index}`}
                   style={{ display: "inline-block", overflow: "hidden" }}
@@ -263,7 +261,7 @@ export default function HomePage() {
             Contact
           </motion.div>
           <h2 className="font-display mt-5 max-w-5xl text-4xl font-semibold uppercase leading-[0.94] tracking-[-0.03em] md:text-7xl">
-            {splitWords("Si tu marca no se siente real, la rehago desde cero.").map((word, index) => (
+            {splitWords("Si tu marca no se siente real, la rehacemos desde cero.").map((word, index) => (
               <span
                 key={`contact-refresh-head-${word}-${index}`}
                 style={{ display: "inline-block", overflow: "hidden" }}
@@ -372,7 +370,7 @@ export default function HomePage() {
                 type="button"
                 className="font-mozaic mt-7 inline-flex h-12 items-center justify-center rounded-full bg-[#f7b7ff] px-8 text-xs font-bold uppercase tracking-[1.2px] text-black transition hover:translate-y-[-1px] hover:bg-white"
               >
-                Quiero construir mi marca
+                Construyamos tu marca
               </button>
             </motion.form>
           </motion.div>

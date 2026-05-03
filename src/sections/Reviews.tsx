@@ -109,7 +109,7 @@ export function ReviewsSection() {
                 <div ref={cubeRef} className="cube relative will-change-transform">
                   <div className="face face-front">
                     <p className="face-quote">
-                      "Kiosco Label entendió desde el principio la vibra que quería para mi marca. El resultado fue
+                      "Kiosco Label entendio desde el principio la vibra que queriamos para nuestra marca. El resultado fue
                       exactamente lo que tenía en la cabeza pero mejor ejecutado."
                     </p>
                     <p className="face-author">
@@ -120,7 +120,7 @@ export function ReviewsSection() {
 
                   <div className="face face-right">
                     <p className="face-quote">
-                      "Nos ayudó a ordenar la identidad visual y todo empezó a sentirse más profesional.
+                      "Nos ayudaron a ordenar la identidad visual y todo empezo a sentirse mas profesional.
                       Hubo criterio, detalle y una dirección muy clara en cada entrega."
                     </p>
                     <p className="face-author">
