@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const clamp = (v: number, min: number, max: number) => Math.min(Math.max(v, min), max);
@@ -87,55 +88,69 @@ export function ReviewsSection() {
           </div>
         </div>
 
-        <div className="cube-shell relative z-10 flex items-center justify-center [perspective:1200px] [perspective-origin:center_center]">
-          <div
-            ref={posRef}
-            className="will-change-transform"
-            style={{ transform: "translateY(120%) scale(0.3)" }}
-          >
-            <div ref={cubeRef} className="cube relative will-change-transform">
-              <div className="face face-front">
-                <p className="face-quote">
-                  "Kiosco Label entendió desde el principio la vibra que quería para mi marca. El resultado fue
-                  exactamente lo que tenía en la cabeza pero mejor ejecutado."
-                </p>
-                <p className="face-author">
-                  — <span className="face-name">Valentina M.</span>,{" "}
-                  <span className="face-role">Fundadora</span>
-                </p>
-              </div>
+        <div className="relative z-10 flex w-full max-w-6xl items-center justify-center px-6 md:px-10">
+          <div className="review-split">
+            <div className="review-logo-wrap">
+              <Image
+                src="/Isotipoblanco2.webp"
+                alt="Kiosco Label"
+                width={260}
+                height={300}
+                className="review-logo"
+                priority={false}
+              />
+            </div>
+            <div className="cube-shell relative flex items-center justify-center [perspective:1200px] [perspective-origin:center_center]">
+              <div
+                ref={posRef}
+                className="will-change-transform"
+                style={{ transform: "translateY(120%) scale(0.3)" }}
+              >
+                <div ref={cubeRef} className="cube relative will-change-transform">
+                  <div className="face face-front">
+                    <p className="face-quote">
+                      "Kiosco Label entendió desde el principio la vibra que quería para mi marca. El resultado fue
+                      exactamente lo que tenía en la cabeza pero mejor ejecutado."
+                    </p>
+                    <p className="face-author">
+                      — <span className="face-name">Valentina M.</span>,{" "}
+                      <span className="face-role">Fundadora</span>
+                    </p>
+                  </div>
 
-              <div className="face face-right">
-                <p className="face-quote">
-                  "Nos ayudó a ordenar la identidad visual y todo empezó a sentirse más profesional.
-                  Hubo criterio, detalle y una dirección muy clara en cada entrega."
-                </p>
-                <p className="face-author">
-                  — <span className="face-name">Carla P.</span>,{" "}
-                  <span className="face-role">Fundadora de marca</span>
-                </p>
-              </div>
+                  <div className="face face-right">
+                    <p className="face-quote">
+                      "Nos ayudó a ordenar la identidad visual y todo empezó a sentirse más profesional.
+                      Hubo criterio, detalle y una dirección muy clara en cada entrega."
+                    </p>
+                    <p className="face-author">
+                      — <span className="face-name">Carla P.</span>,{" "}
+                      <span className="face-role">Fundadora de marca</span>
+                    </p>
+                  </div>
 
-              <div className="face face-left">
-                <p className="face-quote">
-                  "Cada detalle estuvo bien pensado: composición, ritmo y mensaje. El trabajo final se sintió
-                  premium y totalmente alineado con lo que queríamos comunicar."
-                </p>
-                <p className="face-author">
-                  — <span className="face-name">Mariana T.</span>,{" "}
-                  <span className="face-role">Marketing Manager</span>
-                </p>
-              </div>
+                  <div className="face face-left">
+                    <p className="face-quote">
+                      "Cada detalle estuvo bien pensado: composición, ritmo y mensaje. El trabajo final se sintió
+                      premium y totalmente alineado con lo que queríamos comunicar."
+                    </p>
+                    <p className="face-author">
+                      — <span className="face-name">Mariana T.</span>,{" "}
+                      <span className="face-role">Marketing Manager</span>
+                    </p>
+                  </div>
 
-              <div className="face face-back">
-                <p className="face-quote">
-                  "Pasamos de tener ideas sueltas a una presencia visual coherente. La ejecución fue impecable y
-                  el resultado elevó por completo la marca."
-                </p>
-                <p className="face-author">
-                  — <span className="face-name">Andrés C.</span>,{" "}
-                  <span className="face-role">Co-fundador</span>
-                </p>
+                  <div className="face face-back">
+                    <p className="face-quote">
+                      "Pasamos de tener ideas sueltas a una presencia visual coherente. La ejecución fue impecable y
+                      el resultado elevó por completo la marca."
+                    </p>
+                    <p className="face-author">
+                      — <span className="face-name">Andrés C.</span>,{" "}
+                      <span className="face-role">Co-fundador</span>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -156,6 +171,26 @@ export function ReviewsSection() {
 
         .cube-shell {
           --cube-size: min(420px, 80vw);
+        }
+
+        .review-split {
+          display: grid;
+          width: 100%;
+          align-items: center;
+          gap: 2rem;
+          grid-template-columns: 1fr;
+        }
+
+        .review-logo-wrap {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .review-logo {
+          width: clamp(120px, 16vw, 200px);
+          height: auto;
+          object-fit: contain;
         }
 
         .cube {
@@ -246,6 +281,17 @@ export function ReviewsSection() {
           .face-quote {
             font-size: 0.9rem;
             padding-top: 1rem;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .review-split {
+            grid-template-columns: minmax(180px, 0.7fr) 1fr;
+            gap: 3rem;
+          }
+
+          .review-logo-wrap {
+            justify-content: flex-start;
           }
         }
       `}</style>

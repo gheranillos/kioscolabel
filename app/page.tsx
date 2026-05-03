@@ -124,6 +124,13 @@ export default function HomePage() {
       </section>
 
       <section
+        id="proyectos"
+        className="scroll-mt-16 border-t border-neutral-200 bg-[#efefee] px-6 py-20 md:px-10 md:py-28"
+      >
+        <EditorialWorkGrid heading="WORKS" />
+      </section>
+
+      <section
         id="servicios"
         className="scroll-mt-16 border-y border-neutral-200 bg-neutral-100/90"
       >
@@ -240,13 +247,6 @@ export default function HomePage() {
             ))}
           </motion.div>
         </div>
-      </section>
-
-      <section
-        id="proyectos"
-        className="scroll-mt-16 border-t border-neutral-200 bg-[#efefee] px-6 py-20 md:px-10 md:py-28"
-      >
-        <EditorialWorkGrid heading="WORKS" />
       </section>
 
       <ReviewsSection />

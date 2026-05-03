@@ -37,11 +37,11 @@ export default function GlobalIdentityBar() {
         </nav>
         <Link href="/" className="shrink-0" aria-label="Kiosco Label — Inicio">
           <Image
-            src="/iconfooter.png"
+            src="/kscolabel logo negro.webp"
             alt=""
             width={35}
             height={40}
-            className="h-9 w-8 object-contain [filter:brightness(0)]"
+            className="h-9 w-8 object-contain"
             priority
           />
         </Link>

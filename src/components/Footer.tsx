@@ -35,10 +35,9 @@ const Container = ({ children, className, delay = 0.2, reverse, simple }: Props)
 };
 
 const navLinks = [
-  { label: "Inicio", href: "/" },
-  { label: "Sobre mí", href: "/about" },
-  { label: "Portfolio", href: "/work" },
-  { label: "Contacto", href: "/#contacto" },
+  { label: "Work", href: "/work" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/#contacto" },
 ];
 
 const socialLinks = [
@@ -52,7 +51,7 @@ export default function Footer() {
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-8">
           <Container delay={0.1} className="h-auto">
             <Image
-              src="/iconfooter.png"
+              src="/Isotipoblanco2.webp"
               alt="Kiosco Label"
               width={35}
               height={40}
