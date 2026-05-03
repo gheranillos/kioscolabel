@@ -47,9 +47,9 @@ export function ClientsSection() {
   return (
     <section
       id="clientes"
-      className="scroll-mt-16 border-t border-white/5 bg-[#111111] text-white"
+      className="scroll-mt-16 min-h-[350px] border-t border-white/5 bg-[#111111] text-white"
     >
-      <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
+      <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 md:py-12">
         <div className="grid gap-8 md:grid-cols-[auto_1fr] md:items-end md:gap-12 lg:gap-16">
           <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-white/55">
             ✦ Quienes han confiado en nosotros
@@ -78,7 +78,7 @@ export function ClientsSection() {
           </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 md:mt-16 md:grid-cols-4 md:gap-4 lg:grid-cols-6">
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:mt-10 md:grid-cols-4 md:gap-4 lg:grid-cols-6">
           {Array.from({ length: TOTAL_LOGOS }).map((_, idx) => (
             <ClientLogoCard key={idx} index={idx + 1} />
           ))}

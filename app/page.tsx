@@ -155,7 +155,7 @@ export default function HomePage() {
 
       <section
         id="proyectos"
-        className="scroll-mt-16 bg-[#f3f3f3] px-6 py-20 text-neutral-900 md:px-10 md:py-28"
+        className="scroll-mt-16 bg-[#f3f3f3] px-6 py-20 text-white md:px-10 md:py-28"
       >
         <EditorialWorkGrid heading="WORKS" />
       </section>

@@ -15,7 +15,7 @@ export default function GlobalIdentityBar() {
 
   return (
     <header className="pointer-events-none fixed left-0 right-0 top-0 z-40 border-b border-black/5 bg-[#f3f3f3]/85 px-6 backdrop-blur-md md:px-10">
-      <div className="pointer-events-auto mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between text-neutral-900">
+      <div className="pointer-events-auto mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between text-white">
         <Link href="/" className="shrink-0" aria-label="Kiosco Label — Inicio">
           <Image
             src="/kscolabel logo negro.webp"
@@ -36,8 +36,8 @@ export default function GlobalIdentityBar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-mozaic text-sm font-extralight tracking-normal text-neutral-900 transition-colors hover:text-neutral-600 ${
-                  active ? "text-neutral-950" : ""
+                className={`font-mozaic text-sm font-extralight tracking-normal text-white/85 transition-colors hover:text-white ${
+                  active ? "text-white" : ""
                 }`}
               >
                 {link.label}
