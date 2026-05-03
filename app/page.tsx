@@ -1,12 +1,10 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Instagram, MessageCircle } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import { EditorialWorkGrid } from "@/src/components/EditorialWorkGrid";
 import { ReviewsSection } from "@/src/sections/Reviews";
@@ -50,43 +48,114 @@ export default function HomePage() {
 
         <div className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-6 pb-14 pt-28 text-center text-[#f3f3f3] md:px-10 md:pt-32 md:pb-20">
           <p className="font-sans text-xs font-semibold uppercase tracking-[2px] text-black">
-            Kiosco Label - Lecheria, Venezuela
+            {splitWords("Kiosco Label - Lecheria, Venezuela").map((word, index) => (
+              <span
+                key={`hero-eyebrow-${word}-${index}`}
+                style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+              >
+                <motion.span
+                  style={{ display: "inline-block", marginRight: "0.25em" }}
+                  variants={wordVariants}
+                  custom={index}
+                  initial={prefersReduced ? false : "hidden"}
+                  animate={prefersReduced ? undefined : "visible"}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            ))}
           </p>
 
           <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-[#f3f3f3] sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
             <span className="font-sans text-4xl font-extrabold uppercase tracking-[0.2px] text-black sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-              BECAUSE WE THINK
+              {["BECAUSE", "WE", "THINK"].map((word, i) => (
+                <span
+                  key={`hero-line1-${word}-${i}`}
+                  style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+                >
+                  <motion.span
+                    style={{ display: "inline-block", marginRight: "0.25em" }}
+                    variants={wordVariants}
+                    custom={i + 5}
+                    initial={prefersReduced ? false : "hidden"}
+                    animate={prefersReduced ? undefined : "visible"}
+                  >
+                    {word}
+                  </motion.span>
+                </span>
+              ))}
               <br />
-              BEFORE WE DESIGN
+              {["BEFORE", "WE", "DESIGN"].map((word, i) => (
+                <span
+                  key={`hero-line2-${word}-${i}`}
+                  style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+                >
+                  <motion.span
+                    style={{ display: "inline-block", marginRight: "0.25em" }}
+                    variants={wordVariants}
+                    custom={i + 8}
+                    initial={prefersReduced ? false : "hidden"}
+                    animate={prefersReduced ? undefined : "visible"}
+                  >
+                    {word}
+                  </motion.span>
+                </span>
+              ))}
             </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-black md:text-lg">
-            El logo es el 5%. El otro 95% es estrategia, estetica y narrativa. Si tu imagen no refleja tu valor, la reconstruimos completa.
+            {splitWords(
+              "El logo es el 5%. El otro 95% es estrategia, estetica y narrativa. Si tu imagen no refleja tu valor, la reconstruimos completa.",
+            ).map((word, index) => (
+              <span
+                key={`hero-lede-${word}-${index}`}
+                style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+              >
+                <motion.span
+                  style={{ display: "inline-block", marginRight: "0.25em" }}
+                  variants={wordVariants}
+                  custom={index + 12}
+                  initial={prefersReduced ? false : "hidden"}
+                  animate={prefersReduced ? undefined : "visible"}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            ))}
           </p>
 
-          <div className="pointer-events-auto mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Button
-              variant="outline"
-              asChild
-              className="h-11 rounded-none border-neutral-900/20 bg-white/70 px-8 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-900 shadow-sm backdrop-blur-sm hover:bg-neutral-950 hover:text-white"
+          <motion.a
+            href="#proyectos"
+            onClick={(e) => {
+              if (typeof document === "undefined") return;
+              const target = document.getElementById("proyectos");
+              if (!target) return;
+              e.preventDefault();
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            initial={prefersReduced ? false : { opacity: 0, y: 16 }}
+            animate={prefersReduced ? undefined : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 2.0, ease: [0.16, 1, 0.3, 1] }}
+            className="pointer-events-auto mt-14 inline-flex flex-col items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-neutral-700 transition-colors hover:text-neutral-950 md:mt-20"
+            aria-label="Scroll a la sección de proyectos"
+          >
+            <span>Scroll</span>
+            <motion.span
+              aria-hidden
+              animate={prefersReduced ? undefined : { y: [0, 6, 0] }}
+              transition={{ duration: 1.6, ease: "easeInOut", repeat: Infinity }}
+              className="text-base"
             >
-              <Link href="/work">Ver trabajo</Link>
-            </Button>
-            <Button
-              variant="ghost"
-              asChild
-              className="h-11 rounded-none border border-neutral-900/15 bg-transparent px-6 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-800 hover:bg-neutral-100 hover:text-neutral-950"
-            >
-              <Link href="/#contacto">Contactar</Link>
-            </Button>
-          </div>
+              ↓
+            </motion.span>
+          </motion.a>
         </div>
       </section>
 
       <section
         id="proyectos"
-        className="scroll-mt-16 border-t border-neutral-200 bg-[#efefee] px-6 py-20 text-[#f3f3f3] md:px-10 md:py-28"
+        className="scroll-mt-16 bg-[#f3f3f3] px-6 py-20 text-neutral-900 md:px-10 md:py-28"
       >
         <EditorialWorkGrid heading="WORKS" />
       </section>

@@ -41,16 +41,16 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-[#2b2b2b] bg-[#191919] px-6 py-16 md:px-[5vw] md:py-20">
+    <footer className="w-full border-t border-black/5 bg-white px-6 py-16 md:px-[5vw] md:py-20">
       <div className="mx-auto flex w-full max-w-[1200px] flex-col">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-8">
           <Container delay={0.1} className="h-auto">
             <Image
-              src="/Isotipoblanco2.webp"
+              src="/kscolabel logo negro.webp"
               alt="Kiosco Label"
-              width={35}
+              width={127}
               height={40}
-              className="h-[40px] w-[35px] object-contain"
+              className="h-9 w-[127px] object-contain"
               priority={false}
             />
           </Container>
@@ -61,7 +61,7 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-[0.85rem] text-[#9a9a9a] transition-colors duration-200 hover:text-white"
+                  className="text-[0.85rem] text-neutral-500 transition-colors duration-200 hover:text-neutral-900"
                 >
                   {link.label}
                 </Link>
@@ -72,10 +72,10 @@ export default function Footer() {
 
         <Container delay={0.35} className="h-auto">
           <div className="mt-8 flex flex-col items-center justify-between gap-2 text-center md:flex-row md:gap-4 md:text-left">
-            <p className="text-[0.8rem] text-[#aaaaaa]">
+            <p className="text-[0.8rem] text-neutral-500">
               © {new Date().getFullYear()} Kiosco Label. Todos los derechos reservados.
             </p>
-            <p className="text-[0.8rem] text-[#aaaaaa]">
+            <p className="text-[0.8rem] text-neutral-500">
               Diseñado y desarrollado por Kiosco Label
             </p>
           </div>

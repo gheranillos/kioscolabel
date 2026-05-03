@@ -14,8 +14,8 @@ export default function GlobalIdentityBar() {
   const pathname = usePathname();
 
   return (
-    <header className="pointer-events-none fixed left-0 right-0 top-0 z-40 border-b border-neutral-200 bg-neutral-50/95 px-6 backdrop-blur-sm md:px-10">
-      <div className="pointer-events-auto mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between text-[#f3f3f3]">
+    <header className="pointer-events-none fixed left-0 right-0 top-0 z-40 border-b border-black/5 bg-[#f3f3f3]/85 px-6 backdrop-blur-md md:px-10">
+      <div className="pointer-events-auto mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between text-neutral-900">
         <Link href="/" className="shrink-0" aria-label="Kiosco Label — Inicio">
           <Image
             src="/kscolabel logo negro.webp"
