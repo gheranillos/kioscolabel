@@ -91,7 +91,7 @@ export default function HomePage() {
           </p>
 
           <h1 className="mt-8 max-w-4xl text-4xl leading-[1.06] tracking-[-0.03em] text-[#f3f3f3] sm:text-5xl md:text-6xl lg:text-[clamp(3rem,5vw,4.75rem)]">
-            <span className="font-sans align-bottom border border-black bg-white font-extrabold not-italic tracking-normal text-left text-black [background-clip:unset] [-webkit-background-clip:unset]">
+            <span className="font-sans align-bottom bg-white font-extrabold not-italic tracking-normal text-left text-black [background-clip:unset] [-webkit-background-clip:unset]">
               CREANDO MARCAS
             </span>
             <br />
